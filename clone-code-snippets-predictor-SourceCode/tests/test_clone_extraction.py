@@ -10,22 +10,22 @@ def test_ce_001_empty_blocks(clone_module):
 
 
 def test_ce_002_single_line(clone_module):
-    """R-CE-01 边界值：仅一行。"""
+    """R-CE-01 边界值：仅一行代码。"""
     assert clone_module.merge_blocks([(7, 7)]) == [[7, 7]]
 
 
 def test_ce_003_shared_endpoint(clone_module):
-    """R-CE-01 边界值：共享端点需要合并。"""
+    """R-CE-01 边界值：有重复行。"""
     assert clone_module.merge_blocks([(1, 5), (5, 9)]) == [[1, 9]]
 
 
 def test_ce_004_adjacent_blocks(clone_module):
-    """R-CE-01 边界值：相邻而不相交的区间不合并。"""
+    """R-CE-01 边界值：代码段相邻但不相交。"""
     assert clone_module.merge_blocks([(1, 5), (6, 9)]) == [[1, 5], [6, 9]]
 
 
 def test_ce_005_unsorted_chain(clone_module):
-    """R-CE-01 场景法：无序的链式重叠。"""
+    """R-CE-01 场景法：多片段有重叠。"""
     assert clone_module.merge_blocks([(8, 12), (1, 5), (4, 9)]) == [[1, 12]]
 
 
@@ -35,7 +35,7 @@ def test_ce_006_nested_and_duplicate(clone_module):
 
 
 def test_ce_007_xml_merge_and_extension(clone_module, make_clone_xml):
-    """R-CE-02/03 场景法：同文件合并，保留既有后缀映射。"""
+    """R-CE-02/03 场景法：同文件有重叠合并。"""
     path = make_clone_xml([("a.cpp", 2, 5), ("a.cpp", 4, 8)])
     assert clone_module.parse_simian_xml(path) == [
         {"File": "a.cc", "cc_start_line": 2, "cc_end_line": 8, "cc_lines": 7},
