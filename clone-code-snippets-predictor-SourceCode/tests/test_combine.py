@@ -1,5 +1,3 @@
-"""汇总及集成的 12 条用例，对应 CCP-M1-CO-001 至 012。AI 辅助编写。"""
-
 import pandas as pd
 
 
