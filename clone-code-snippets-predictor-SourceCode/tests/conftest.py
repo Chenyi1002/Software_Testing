@@ -1,9 +1,3 @@
-"""模块一公共数据与加载工具。AI 辅助编写，用例对应实验设计方案。
-
-默认从 tests 的上级目录读取源码；其他位置需显式传入 --source-dir。
-只创建临时测试数据，不复制、修复或替换被测算法。
-"""
-
 import hashlib
 import importlib.util
 from pathlib import Path
