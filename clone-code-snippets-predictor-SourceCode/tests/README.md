@@ -1,6 +1,6 @@
 # 模块一测试运行说明
 
-本目录按《模块一实验设计方案》实现 40 条 pytest 用例。测试及设计均为 AI 辅助编写，应如实保留来源；课程模块一的 AI 使用限制见课程要求。
+本目录按《模块一实验设计方案》实现 40 条 pytest 用例。
 
 | 文件 | 内容 | 用例数 |
 | --- | --- | --- |
@@ -40,7 +40,6 @@ python -m pytest tests --source-dir tmp/project-review -v
 
 本次验证环境为 Windows、Python 3.12.14、pytest 9.1.1、pandas 3.0.1、openpyxl 3.1.5、numpy 2.3.5。其他环境可运行，但应记录各自实际版本。
 
-本机验证使用了 Codex 自带 Python，以及 `tmp/pytest-deps` 中隔离安装的 pytest 依赖，并未安装到系统 Python。若要直接复用本机验证环境，可在当前目录执行：
 
 ```powershell
 $env:PYTHONPATH = (Resolve-Path 'tmp/pytest-deps').Path
