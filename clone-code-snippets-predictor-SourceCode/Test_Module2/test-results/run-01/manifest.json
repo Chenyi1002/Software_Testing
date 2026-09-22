@@ -1,0 +1,23 @@
+{
+  "project": "clone-code-snippets-predictor",
+  "module": "module2",
+  "baseline_time": "2026-09-22",
+  "source_version": "e53ac30",
+  "source_hashes": {
+    "code_halstead_extract.py": "2a5ee20eec6e057bef8898c6f4faf9a0f9a4ce9095c3f92433f2c81d4f87b2ac",
+    "Extract_HalsteadMetrics.py": "5e1d50a1bc6ce70c054e3241955841fab12e822a97a0eae11aa8dcab9447852b"
+  },
+  "environment": {
+    "os": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "python": "3.14.7",
+    "pytest": "9.1.1",
+    "pandas": "3.0.6",
+    "openpyxl": "3.1.5",
+    "numpy": "2.5.3"
+  },
+  "result_summary": {
+    "total": 26,
+    "passed": 18,
+    "failed": 8
+  }
+}
